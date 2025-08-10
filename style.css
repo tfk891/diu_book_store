@@ -1,0 +1,103 @@
+/* Aesthetic modern styling for DIU Book Store */
+
+:root{
+  --bg1: #eef2ff;
+  --card: #ffffff;
+  --accent: #6C63FF;
+  --accent-2: #ff7e67;
+  --muted: #6b7280;
+}
+
+*{box-sizing: border-box;}
+body{
+  margin:0;
+  font-family: Inter, 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, #f6f8ff 0%, #eef2ff 100%);
+  color:#1f2937;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 24px;
+  background: linear-gradient(90deg, rgba(108,99,255,0.12), rgba(255,126,103,0.08));
+  backdrop-filter: blur(4px);
+}
+.topbar .brand{
+  font-weight:700;
+  color:var(--accent);
+  font-size:20px;
+}
+.topbar .top-actions{display:flex;gap:12px;align-items:center;}
+.topbar .link{
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:8px;
+  background:transparent;
+  color:var(--accent);
+  font-weight:600;
+}
+.topbar .welcome{color:var(--muted); margin-right:6px;}
+
+.center-card{
+  max-width:420px;
+  margin:70px auto;
+  background:var(--card);
+  padding:28px;
+  border-radius:14px;
+  box-shadow: 0 10px 30px rgba(43,52,69,0.08);
+  text-align:center;
+}
+.brand{font-weight:800; color:var(--accent); font-size:22px;}
+h2{margin:10px 0 18px; color:#111827;}
+
+.form-grid{display:flex;flex-direction:column;gap:12px;}
+.form-grid input, .form-grid select{
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid #e6e9f2;
+  font-size:14px;
+}
+.btn-main{
+  background: linear-gradient(90deg,var(--accent), #8b6bff);
+  color:white;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  font-weight:700;
+  cursor:pointer;
+}
+.btn-main:hover{opacity:0.95; transform:translateY(-1px);}
+
+.muted{color:var(--muted); font-size:14px; margin-top:12px;}
+.alert{background:#fff1f0;color:#9b1c1c;padding:10px;border-radius:8px;margin-bottom:8px;}
+
+.container{
+  max-width:1100px;
+  margin:28px auto;
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  box-shadow: 0 8px 24px rgba(43,52,69,0.06);
+}
+
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.search-form{display:flex;gap:8px;align-items:center;}
+.search-form input{padding:10px;border-radius:10px;border:1px solid #e6e9f2;min-width:220px;}
+.btn-small{padding:8px 10px;border-radius:8px;border:none;background:var(--accent-2);color:white;cursor:pointer;font-weight:700;}
+
+.table-wrap{overflow:auto;margin-top:18px;}
+.book-table{width:100%;border-collapse:collapse;min-width:720px;}
+.book-table thead th{background:linear-gradient(90deg,var(--accent), #8b6bff);color:#fff;padding:12px;text-align:left;border-radius:6px 6px 0 0;}
+.book-table th, .book-table td{padding:12px;border-bottom:1px solid #f2f4f8;}
+.book-table tbody tr:hover{background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(250,250,251,0.8));transform:translateY(0px);}
+.book-table td .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#f3f4ff;color:#3b3bff;font-weight:700;font-size:12px;}
+
+.link-inline{color:var(--accent-2);text-decoration:none;font-weight:700}
+
+@media (max-width:760px){
+  .center-card{margin:30px 12px}
+  .container{margin:14px}
+  .book-table{font-size:13px}
+}
