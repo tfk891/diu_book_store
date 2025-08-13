@@ -7,7 +7,6 @@ session_start();
         <?php if (isset($_SESSION['user'])): ?>
             <span class="welcome">Hello, <?php echo htmlspecialchars($_SESSION['user']); ?></span>
             <a class="link" href="books.php">Add Book</a>
-            <!-- Removed the List link as requested -->
             <a class="link" href="logout.php">Logout</a>
         <?php else: ?>
             <a class="link" href="signup.php">Signup</a>
