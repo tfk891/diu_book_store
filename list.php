@@ -7,9 +7,8 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $user_id = $_SESSION['user_id'];
-$username = $_SESSION['user']; // Assuming you store username in session as 'user'
+$username = $_SESSION['user'];
 
-// Handle claim action
 if (isset($_GET['claim'])) {
     $book_id = intval($_GET['claim']);
     $stmt = $conn->prepare("INSERT IGNORE INTO user_claims (user_id, book_id) VALUES (?, ?)");
